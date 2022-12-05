@@ -1,0 +1,212 @@
+<html>
+<head>
+  <title>Real Time Image Identification App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+<center>
+  <h1>MobileNet vs. GOOGLE LENS</h1>
+  <ol>
+<div class="test_image_and_result col-xs-12">
+  <li class="col-sm-4 col-xs-12">
+<b> Test Image - Scissors</b>
+<img src="20221122_174412.jpg" class="img-responsive">
+</li>
+
+<h5 class="col-sm-4 col-xs-12">
+  <b> GOOGLE LENS - Scissors</b>
+<span></span>
+</h5>
+
+<h5 class="col-sm-4 col-xs-12">
+  <b> MobileNet Model - Sunglass</b>
+<span></span>
+</h5>
+
+<div class="mini_result col-xs-12">
+  <h4> Result - Google Lens</h4>
+  <hr>
+  <h4> </h4>
+</div>
+
+</div>
+<br>
+
+
+<div class="test_image_and_result col-xs-12">
+  <li class="col-sm-4 col-xs-12">
+<b> Test Image - Snow Globe</b>
+<img src="20221122_174421.jpg" class="img-responsive">
+</li>
+
+<h5 class="col-sm-4 col-xs-12">
+  <b> GOOGLE LENS - Snow globe</b>
+<span></span>
+</h5>
+
+<h5 class="col-sm-4 col-xs-12">
+  <b> MobileNet Model - Soap dispenser</b>
+<span></span>
+</h5>
+
+<div class="mini_result col-xs-12">
+  <h4> Result - Google Lens</h4>
+  <hr>
+  <h4> </h4>
+</div>
+</div>
+<br>
+
+
+
+<div class="test_image_and_result col-xs-12">
+  <li class="col-sm-4 col-xs-12">
+<b> Test Image - Computer mouse</b>
+<img src="20221122_174428.jpg" class="img-responsive">
+</li>
+
+<h5 class="col-sm-4 col-xs-12">
+  <b> GOOGLE LENS - Wireless mouse</b>
+<span></span>
+</h5>
+
+<h5 class="col-sm-4 col-xs-12">
+  <b> MobileNet Model - Mouse, computer mouse</b>
+<span></span>
+</h5>
+
+<div class="mini_result col-xs-12">
+  <h4> Result - Draw</h4>
+  <hr>
+  <h4> </h4>
+</div>
+</div>
+<br>
+
+
+
+<div class="test_image_and_result col-xs-12">
+  <li class="col-sm-4 col-xs-12">
+<b> Test Image - Marker</b>
+<img src="20221122_174458.jpg" class="img-responsive">
+</li>
+
+<h5 class="col-sm-4 col-xs-12">
+  <b> GOOGLE LENS - Marker</b>
+<span></span>
+</h5>
+
+<h5 class="col-sm-4 col-xs-12">
+  <b> MobileNet Model - Swab, swob, mop</b>
+<span></span>
+</h5>
+
+<div class="mini_result col-xs-12">
+  <h4> Result - Google lens</h4>
+  <hr>
+  <h4> </h4>
+</div>
+</div>
+<br>
+
+
+
+<div class="test_image_and_result col-xs-12">
+  <li class="col-sm-4 col-xs-12">
+<b> Test Image - Pop toy</b>
+<img src="20221122_174521.jpg" class="img-responsive">
+</li>
+
+<h5 class="col-sm-4 col-xs-12">
+  <b> GOOGLE LENS - Rainbow fidget toy</b>
+<span></span>
+</h5>
+
+<h5 class="col-sm-4 col-xs-12">
+  <b> MobileNet Model - Wallet, billfold, notecase, pocketbook</b>
+<span></span>
+</h5>
+
+<div class="mini_result col-xs-12">
+  <h4> Result - Google lens</h4>
+  <hr>
+  <h4> </h4>
+</div>
+</div>
+<br>
+
+
+
+<div class="test_image_and_result col-xs-12">
+  <li class="col-sm-4 col-xs-12">
+<b> Test Image - Tape</b>
+<img src="20221122_174541.jpg" class="img-responsive">
+</li>
+
+<h5 class="col-sm-4 col-xs-12">
+  <b> GOOGLE LENS - Transparent tape dispencer</b>
+<span></span>
+</h5>
+
+<h5 class="col-sm-4 col-xs-12">
+  <b> MobileNet Model - Bubble</b>
+<span></span>
+</h5>
+
+<div class="mini_result col-xs-12">
+  <h4> Result - Google Lens</h4>
+  <hr>
+  <h4> </h4>
+</div>
+</div>
+<br>
+
+
+
+<div class="test_image_and_result col-xs-12">
+  <li class="col-sm-4 col-xs-12">
+<b> Test Image - Dice</b>
+<img src="20221122_174620.jpg" class="img-responsive">
+</li>
+
+<h5 class="col-sm-4 col-xs-12">
+  <b> GOOGLE LENS - Dice</b>
+<span></span>
+</h5>
+
+<h5 class="col-sm-4 col-xs-12">
+  <b> MobileNet Model - Holster</b>
+<span></span>
+</h5>
+
+<div class="mini_result col-xs-12">
+  <h4> Result - Google lens</h4>
+  <hr>
+  <h4> </h4>
+</div>
+</div>
+<br>
+  </ol>
+  <h2> Google Lens is more accurate</h2>
+</center>
+
+<div class="copy_right_footer">
+Developed by Akshara D.
+</div>
+
+<script src="main.js"></script>
+</body>
+
+</html>
+
+
